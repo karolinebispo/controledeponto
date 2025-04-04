@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Registro de Ponto</title>
   <link rel="manifest" href="manifest.json" />
 
@@ -14,19 +14,22 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+      background-color: #e9f0f6;
+    }
+
     body {
-      background-color: #f1f1f1;
-      padding: 20px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      align-items: center;
+      padding: 16px;
     }
 
     .container {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 24px;
       width: 100%;
       max-width: 400px;
@@ -36,12 +39,13 @@
       text-align: center;
       margin-bottom: 24px;
       color: #333;
+      font-size: 1.5rem;
     }
 
     label {
       display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
+      margin-bottom: 6px;
+      font-weight: 600;
       color: #444;
     }
 
@@ -51,7 +55,7 @@
       padding: 12px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 16px;
     }
 
@@ -63,7 +67,7 @@
       color: white;
       font-weight: bold;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
@@ -76,7 +80,6 @@
       margin-top: 16px;
       text-align: center;
       font-weight: bold;
-      color: green;
     }
   </style>
 </head>
@@ -99,7 +102,6 @@
     </select>
 
     <button onclick="registrar()">Registrar Ponto</button>
-
     <p id="status"></p>
   </div>
 
